@@ -1,11 +1,14 @@
 # -*- coding: utf-8 -*-
 import scrapy
+from scrapy.exceptions import CloseSpider
 from scrapy.http import Request # 调用请求
-from zhihu.items import HuidaItem
+
 import logging
 import pymongo
 import json
 import time
+from code.zhihu.zhihu.items import HuidaItem
+
 
 class UserDataSpider(scrapy.Spider):
     name = 'huida'

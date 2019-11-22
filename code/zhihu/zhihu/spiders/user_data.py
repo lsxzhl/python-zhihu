@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 import scrapy
 from scrapy.http import Request # 调用请求
-from zhihu.items import ZhihuItem
 import logging
 import pymongo
 from bs4 import BeautifulSoup
 import json
+
+from code.zhihu.zhihu.items import ZhihuItem
+
 
 class UserDataSpider(scrapy.Spider):
     name = 'user_data'
